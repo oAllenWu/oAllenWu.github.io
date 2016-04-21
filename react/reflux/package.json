@@ -1,0 +1,22 @@
+{
+  "name": "react-reflux-sort",
+  "version": "1.0.0",
+  "description": "my react reflux for sort demo",
+  "main": "server.js",
+  "scripts": {
+    "bulid": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wujl",
+  "license": "ISC",
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-hot-loader": "^1.3.0",
+    "reflux": "^0.4.1",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
