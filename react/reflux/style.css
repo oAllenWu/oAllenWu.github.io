@@ -6,11 +6,11 @@ body{font-family: Microsoft Yahei;}
 .cf:after{
 	content: '';
 	display: block;
-	visibility: none;
+	visibility: hidden;
 	clear: both;
 
 }
-#app .sort-container{width: 600px;margin: 0 auto;}
+#app .sort-container{width: 600px;margin: 0 auto;padding-top:50px;}
 #app .sort-container ul{
 	list-style-type: none;
 	height: 500px;
