@@ -5,7 +5,7 @@ class Input extends Component{
     render(){
 
         return (
-            <input id="input"/>  
+            <input type="text" id="input"/>  
         ) 
     }  
 }

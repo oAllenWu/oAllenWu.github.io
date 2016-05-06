@@ -11,14 +11,15 @@ import * as TodoActions from '../actions/actions';
 class App extends Component {
    
     constructor(props){
- 
         super(props)
         this.onAddItem = this.onAddItem.bind(this); 
     }
     onAddItem(){
         const {actions} = this.props;  
         const input = findDOMNode(this.refs.inputTxt);
-       	actions.addItem(input.value)
+       	actions.addItem(input.value);
+        input.focus();
+        input.value = '';
     }  
    
     render(){
@@ -35,23 +36,26 @@ class App extends Component {
 }
 
 App.propTypes = {
-	item:PropTypes.array.isRequired,
-	actions:PropTypes.object.isRequired
+	  item:PropTypes.array.isRequired,
+	  actions:PropTypes.object.isRequired
 }
 
 /**
- * 把store的state跟组件连接起来
+ * 把store的state传递到顶层组件的props
  */
 function mapStateToProps(state) {
-  return {
-    item: state.appItem
-  }
+    return {
+        item: state.appItem
+    }
 }
 
+/**
+ * 把action creator传递到顶层组件的props
+ */
 function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(TodoActions, dispatch)
-  }
+    return {
+        actions: bindActionCreators(TodoActions, dispatch)
+    }
 }
 
 export default connect(

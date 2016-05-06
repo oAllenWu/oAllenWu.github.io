@@ -3,6 +3,7 @@ import React,{Component,PropTypes} from 'react';
 class Item extends Component{
 
     render(){
+
         let {item} = this.props;
         let items = item.map(function(item,index){
             return (
@@ -11,7 +12,6 @@ class Item extends Component{
         });
           
     	return (
- 
             <ul className="ul">
                 {items}
             </ul>               
